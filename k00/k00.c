@@ -27,7 +27,7 @@ int main(void)
             max_val = val;
         }
         if(val<min_val){
-            min_val = val;
+            min_val = val; 
         }
     }
 
