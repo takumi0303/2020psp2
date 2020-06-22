@@ -3,12 +3,12 @@
 #include <string.h>
 #include <math.h>
 
-extern double ave_online(double val,double ave)
+ double ave_online(double val,double ave)
 
 {
     return(((N-1)*ave/N)+(val/N));
 }
-extern double var_online()
+ double var_online(double val,double ave,double square_ave,int N)
 {
     return(((N-1)*square_ave/N)+pow(val,2)/N)-pow((((N-1)*ave/N)+(val/N)),2);
 }
@@ -17,9 +17,9 @@ int main(void)
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
-    double var,square_ave,unvar;
     double ave =0;
     int N=0;
+    double var,square_ave,esvar,esave;
     FILE* fp;
 
     printf("input the filename of sample:");
@@ -44,16 +44,18 @@ int main(void)
 
     }
 
-    ubvar=N*var/(N-1);
+    esvar=N*var/(N-1);
+    esave=ave;
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
     }
 
-    printf("ave=%1f\n",stderr);
-    printf("var=%1f\n",var);
-    printf("unvar=%1f\n",unvar);
+    printf("標本平均：ave=%1f\n",ave);
+    printf("標本分散：var=%1f\n",var);
+    printf("母集団平均：unvar=%1f\n",esave);
+    printf("母集団分散：unvar=%1f\n",esvar);
 
 
     return 0;
