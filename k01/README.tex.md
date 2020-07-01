@@ -44,5 +44,14 @@ $$u^2=\dfrac{1}{N-1}\sum_{i=1}^{N}\left(x_{i}-\bar{x}\right)^2=\dfrac{N}{N-1}s^2
 .57 標本分散 varを出力
 .58 母集団平均 esvarを出力
 .59 母集団分散 esaveを出力
+
+##　入出力の結果
+input the filename of sample:k01.c
+the filename of sample: k01.c
+標本平均：ave=0.000000
+標本分散：var=0.000000
+母集団平均：unvar=0.000000
+母集団分散：unvar=0.000000
+
 ## 修正履歴
 

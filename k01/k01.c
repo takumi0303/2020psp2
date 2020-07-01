@@ -3,10 +3,9 @@
 #include <string.h>
 #include <math.h>
 
- double ave_online(double val,double ave)
+ double ave_online(double val,double ave,int N)
 
 {
-    int N=0;
     return(((N-1)*ave/N)+(val/N));
 }
  double var_online(double val,double ave,double square_ave,int N)
@@ -34,14 +33,13 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    while(fgets(buf,sizeof(buf),fp) != NULL){
+    while(fgets(buf,sizeof(buf),fp) != NULL)
+    {
         sscanf(buf,"%lf",&val);
-   N++;
-   var=var_online(val,ave,square_ave,N);
-   ave=ave_online(val,ave,N);
-   square_ave=ave_online(pow(val,3),square_ave,N);
-
-
+     N++;
+     var=var_online(val,ave,square_ave,N);
+     ave=ave_online(val,ave,N);
+     square_ave=ave_online(pow(val,3),square_ave,N);
 
     }
 
