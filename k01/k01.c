@@ -39,7 +39,7 @@ int main(void)
      N++;
      var=var_online(val,ave,square_ave,N);
      ave=ave_online(val,ave,N);
-     square_ave=ave_online(pow(val,3),square_ave,N);
+     square_ave=ave_online(pow(val,2),square_ave,N);
 
     }
 

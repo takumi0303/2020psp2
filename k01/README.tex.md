@@ -46,12 +46,12 @@ $$u^2=\dfrac{1}{N-1}\sum_{i=1}^{N}\left(x_{i}-\bar{x}\right)^2=\dfrac{N}{N-1}s^2
 .59 母集団分散 esaveを出力
 
 ##　入出力の結果
-input the filename of sample:k01.c
-the filename of sample: k01.c
-標本平均：ave=0.000000
-標本分散：var=0.000000
-母集団平均：unvar=0.000000
-母集団分散：unvar=0.000000
+input the filename of sample:../sample/heights_male.csv
+the filename of sample: ../sample/heights_male.csv
+讓呎悽蟷ｳ蝮・ｼ啾ve=173.888750
+讓呎悽蛻・淵・嘛ar=4618557.746829
+豈埼寔蝗｣蟷ｳ蝮・ｼ嗽nvar=173.888750
+豈埼寔蝗｣蛻・淵・嗽nvar=5278351.710662
 
 ## 修正履歴
 
