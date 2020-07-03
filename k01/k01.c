@@ -4,20 +4,21 @@
 #include <math.h>
 
  double ave_online(double val,double ave,int N)
-
 {
     return(((N-1)*ave/N)+(val/N));
 }
+
  double var_online(double val,double ave,double square_ave,int N)
 {
     return(((N-1)*square_ave/N)+pow(val,2)/N)-pow((((N-1)*ave/N)+(val/N)),2);
 }
+
 int main(void)
 {
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
-    double ave =0;
+    double ave=0;
     int N=0;
     double var,square_ave,esvar,esave;
     FILE* fp;
@@ -36,11 +37,10 @@ int main(void)
     while(fgets(buf,sizeof(buf),fp) != NULL)
     {
         sscanf(buf,"%lf",&val);
-     N++;
-     var=var_online(val,ave,square_ave,N);
-     ave=ave_online(val,ave,N);
-     square_ave=ave_online(pow(val,2),square_ave,N);
-
+        N++;
+        var=var_online(val,ave,square_ave,N);
+        ave=ave_online(val,ave,N);
+        square_ave=ave_online(pow(val,2),square_ave,N);
     }
 
     esvar=N*var/(N-1);
@@ -58,5 +58,4 @@ int main(void)
 
 
     return 0;
-
 }
