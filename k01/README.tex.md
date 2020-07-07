@@ -95,3 +95,6 @@ $$u^2=\dfrac{1}{N-1}\sum_{i=1}^{N}\left(x_{i}-\bar{x}\right)^2=\dfrac{N}{N-1}s^2
     
 [comment #20200703]
 - OKです. 
+
+[comment #20200707 sonoda]
+- 課題1の完了を確認しました．
