@@ -7,6 +7,9 @@ extern double p_stdnorm(double z);
 
 int main(void)
 {
+    double z;
+    double mu_1, mu_2;
+    double var_1, var_2;
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
@@ -24,13 +27,22 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
+    printf("mu_1=");
+    scanf("%lf",&mu_1);
+    printf("var_1=");
+    scanf("%lf",&var_1);
+    printf("mu_2=");
+    scanf("%lf",&mu_2);
+    printf("var_2=");
+    scanf("%lf",&var_2);
+
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
+        z=(val-mu_1)/var_1;
+        L1=p_stdnorm(z)*L1;
 
-
-    
-
-
+        z=(val-mu_2)/var_2;
+        L1=p_stdnorm(z)*L2;
 
     }
 
@@ -39,8 +51,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",max_val);
-    printf("L_B: %f\n",min_val);
+    printf("L_1: %f\n",L1);
+    printf("L_2: %f\n",L2);
 
     return 0;
 
