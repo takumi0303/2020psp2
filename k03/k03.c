@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     int i;
     double dummy;
 
-
+    sscanf(argv[argc-3],"%lf")
 
 
 
