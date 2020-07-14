@@ -1,6 +1,6 @@
 # 課題3 レポート
 
-aa83988848 薗田光太郎
+bb35319012 大木拓海
 
 ## 課題
 
@@ -66,7 +66,10 @@ int main(int argc, char* argv[])
 
 
 ## ソースコードの説明
-
+28 muを取得
+29 sigmaを取得
+30 num_dummyを取得
+41 dummyを求める
 ## 入出力結果
 
 以下は例です． コンパイルするときに`-DCONST_SEED`をつけるとこうなります．
@@ -86,7 +89,8 @@ Num of dummy data: 5
 
 コンパイル時に`-DCONST_SEED`をつけない場合を以下に示す．
 
-
+error
+:mu,sigma,num_dummy
 
 ## 修正履歴
 
