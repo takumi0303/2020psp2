@@ -66,10 +66,12 @@ int main(int argc, char* argv[])
 
 
 ## ソースコードの説明
-28 muを取得
-29 sigmaを取得
-30 num_dummyを取得
-41 dummyを求める
+
+- 28 muを取得
+- 29 sigmaを取得 
+- 30 num_dummyを取得 
+- 41 dummyを求める
+
 ## 入出力結果
 
 以下は例です． コンパイルするときに`-DCONST_SEED`をつけるとこうなります．
@@ -89,8 +91,13 @@ Num of dummy data: 5
 
 コンパイル時に`-DCONST_SEED`をつけない場合を以下に示す．
 
+```
 error
 :mu,sigma,num_dummy
+```
 
 ## 修正履歴
+[comment #20200714]
+- l.30 num_dummyはint型にしているようなので, 書式指定子を %lf ではなく, 適切なものにしましょう. 
+- l.39 for文の条件のところに記述ミスがあります. `;`であるべきところが`,`になっています. また, 最後に余分な`;`があります. 
 
