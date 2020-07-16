@@ -103,3 +103,6 @@ error
 
 [comment #20200716]
 - OKです. 
+
+[comment #20200716 sonoda]
+- 課題3完了確認
