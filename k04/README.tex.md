@@ -15,6 +15,7 @@ bb35319012　大木拓海
 16 personという配列を作る
 以降、ループで番号があるかを確認
 なければNo dataと表示
+40 heights.csvの一番上を操作から外すため、fgetsをあらかじめ行う
 
 ## 入出力結果
 
@@ -40,6 +41,19 @@ Which ID's data do you want? : 45313124
 No data
 ```
 
+
+Which ID's data do you want?:45313002
+ID=45313002
+gender=MALE
+height=183.87
+PS C:\Users\bb35319012\Desktop\2020psp2\k04> ./k04
+input the filename of sample height: ../sample/heights.csv
+sucess
+input the filename of sample ID:../sample/IDs.csv
+Which ID's data do you want?:45318088
+ID=45318088
+gender=MALE
+height=171.10
 
 
 

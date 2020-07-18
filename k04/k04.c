@@ -39,6 +39,8 @@ else
 }
 
 i=0;
+fgets(buf,sizeof(buf),fp);
+
 while (fgets(buf,sizeof(buf),fp)!=NULL)
 {
    sscanf(buf,"%d,%lf",&person[i].gender,&person[i].height);
@@ -58,9 +60,7 @@ printf("input the filename of sample ID:");
         fputs("File open error\n",stderr);
         exit(EXIT_FAILURE);
     }
-
     i=0;
-
     while(fgets(buf,sizeof(buf),fp)!=NULL)
     {
         sscanf(buf,"%d",&person[i].id);
