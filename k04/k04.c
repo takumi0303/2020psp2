@@ -20,7 +20,7 @@ int main(void)
     FILE* fp;
     int input_id;
     int i;
-    int x=-1;
+    int position_x=-1;
     
 
 
@@ -32,10 +32,6 @@ if(fp==NULL)
 {
     fputs("File open error\n",stderr);
     exit(EXIT_FAILURE);
-}
-else
-{
-   printf("sucess\n");
 }
 
 i=0;
@@ -75,30 +71,30 @@ printf("input the filename of sample ID:");
      printf("Which ID's data do you want?:");
      scanf("%d",&input_id);
 
-     for(i=0;i<14;i++)
+     for(i=0;i<N;i++)
      {
          if(person[i].id==input_id)
            {
-               x=i;
+               position_x=i;
            }
           else
           
             {
-                x=x;      
+                position_x=position_x;      
             }
           
            
      }
 
-     if(x==-1)
+     if(position_x==-1)
      {
          printf("No data");
      }
      else
      {
-        printf("ID=%d\n",person[x].id);
-        printf("gender=%s\n",person[x].gender==1?"MALE":"FEMALE");    /* 三項演算子 */
-        printf("height=%.2lf\n",person[x].height); 
+        printf("ID=%d\n",person[position_x].id);
+        printf("gender=%s\n",person[position_x].gender==1?"MALE":"FEMALE");    /* 三項演算子 */
+        printf("height=%.2lf\n",person[position_x].height); 
     }
 
     return 0;
